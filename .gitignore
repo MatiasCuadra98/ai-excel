@@ -1,0 +1,287 @@
+# ====================================
+# NODE.JS & NPM
+# ====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ====================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ====================================
+# Environment files for all apps
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Specific app environments
+apps/backend/.env
+apps/backend/.env.*
+!apps/backend/.env.example
+apps/frontend/.env
+apps/frontend/.env.*
+!apps/frontend/.env.example
+apps/ai-api/.env
+apps/ai-api/.env.*
+!apps/ai-api/.env.example
+packages/*/.env
+packages/*/.env.*
+
+# Auth tokens and secrets
+*.pem
+*.key
+*.crt
+jwt-secret.txt
+auth-config.json
+
+# ====================================
+# BUILD OUTPUT & DIST
+# ====================================
+dist/
+build/
+out/
+.next/
+.vercel/
+
+# ====================================
+# LOGS & DEBUG FILES
+# ====================================
+*.log
+logs/
+*.log.*
+debug.log
+error.log
+access.log
+combined.log
+
+# App specific logs
+apps/*/logs/
+apps/*/debug.log
+apps/*/error.log
+
+# PM2 logs
+pm2.log
+ecosystem.config.js
+
+# ====================================
+# DATABASE & MIGRATIONS
+# ====================================
+# Uncomment if you want to ignore migrations/seeders
+# migrations/
+# seeders/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ====================================
+# AI & MACHINE LEARNING
+# ====================================
+# Python cache and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model files and datasets
+*.pkl
+*.h5
+*.hdf5
+*.model
+*.weights
+datasets/
+ai-models/
+ml-models/
+trained-models/
+checkpoints/
+
+# TensorFlow/PyTorch specific
+*.pb
+*.pth
+*.ckpt
+
+# ====================================
+# FILE UPLOADS & TEMP FILES
+# ====================================
+# Excel and document files
+uploads/
+temp/
+tmp/
+public/uploads/
+storage/
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.doc
+*.docx
+*.tmp
+*.temp
+
+# Image uploads (but keep example images)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+!public/images/
+!assets/images/
+!src/assets/
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# ====================================
+# AWS & CLOUD SERVICES
+# ====================================
+.aws/
+aws-exports.js
+
+# ====================================
+# NEXT.JS & REACT
+# ====================================
+.next/
+out/
+.swc/
+*.tsbuildinfo
+next-env.d.ts
+
+# ====================================
+# TYPESCRIPT
+# ====================================
+*.tsbuildinfo
+
+# ====================================
+# TESTING
+# ====================================
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+.pytest_cache/
+.cache
+
+# ====================================
+# IDE & EDITOR
+# ====================================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ====================================
+# OS GENERATED FILES
+# ====================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ====================================
+# PACKAGE MANAGERS
+# ====================================
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ====================================
+# RUNTIME & CACHE
+# ====================================
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ====================================
+# MISC
+# ====================================
+*.tgz
+*.tar.gz
+.local
+.history
+
+# Project documentation and workspace files
+
+# ====================================
+# MONOREPO SPECIFIC
+# ====================================
+# Workspace and lerna
+.lerna/
+lerna-debug.log
+
+# Rush
+common/temp/
+common/scripts/install-run-rush.js
+
+# Nx
+.nx/
+nx.json
+
+# Turborepo
+.turbo/
+
+# Package build artifacts
+packages/*/dist/
+packages/*/build/
+packages/*/lib/
+
+# App build artifacts
+apps/*/dist/
+apps/*/build/
+apps/*/.next/
+apps/*/out/
+
+# Shared configurations (if sensitive)
+shared-config.json
+workspace-config.json
+
+# ====================================
+# DEPLOYMENT & INFRASTRUCTURE
+# ====================================
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Kubernetes
+*.kubeconfig
+k8s-secrets/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# Vercel
+.vercel/

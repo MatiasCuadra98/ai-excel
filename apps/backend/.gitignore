@@ -1,0 +1,140 @@
+# ====================================
+# BACKEND SPECIFIC GITIGNORE
+# ====================================
+
+# ====================================
+# NODE.JS
+# ====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ====================================
+# ENVIRONMENT VARIABLES
+# ====================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+
+# ====================================
+# DATABASE
+# ====================================
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Database credentials and connection strings (backup)
+database.json
+database-config.json
+
+# ====================================
+# LOGS
+# ====================================
+logs/
+*.log
+error.log
+debug.log
+access.log
+app.log
+pm2.log
+
+# ====================================
+# FILE UPLOADS
+# ====================================
+uploads/
+temp/
+tmp/
+public/uploads/
+storage/
+
+# Excel files (temporary processing)
+*.xlsx
+*.xls
+*.csv
+
+# Image files (temporary processing)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+
+# ====================================
+# SESSION & AUTH
+# ====================================
+sessions/
+.session
+auth-tokens/
+
+# ====================================
+# CACHE & TEMP
+# ====================================
+.cache/
+.tmp/
+*.tmp
+*.temp
+
+# ====================================
+# BUILD & DIST
+# ====================================
+dist/
+build/
+coverage/
+
+# ====================================
+# AWS & CLOUD
+# ====================================
+.aws/
+aws-exports.js
+
+# ====================================
+# TESTING
+# ====================================
+.nyc_output/
+coverage/
+test-results/
+.jest/
+
+# ====================================
+# MONITORING & PERFORMANCE
+# ====================================
+# New Relic
+newrelic.js
+newrelic_agent.log
+
+# PM2
+ecosystem.config.js
+.pm2/
+
+# ====================================
+# SECURITY
+# ====================================
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+ssl/
+certificates/
+
+# ====================================
+# IDE & EDITOR
+# ====================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ====================================
+# OS FILES
+# ====================================
+.DS_Store
+Thumbs.db
