@@ -21,5 +21,21 @@ module.exports = (sequelize) => {
     timestamps: true,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  Image.associate = function(models) {
+    // Image has many products (one image can be associated with multiple products)
+    Image.hasMany(models.Product, {
+      foreignKey: 'imageId',
+      as: 'products'
+    });
+
+    // Image has many prediction logs
+    Image.hasMany(models.PredictionLog, {
+      foreignKey: 'imageId',
+      as: 'predictionLogs'
+    });
+  };
+
   return Image;
 };

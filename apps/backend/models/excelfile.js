@@ -26,5 +26,21 @@ module.exports = (sequelize) => {
     timestamps: true,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  ExcelFile.associate = function(models) {
+    // ExcelFile belongs to User
+    ExcelFile.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: 'user'
+    });
+
+    // ExcelFile has many products
+    ExcelFile.hasMany(models.Product, {
+      foreignKey: 'excelFileId',
+      as: 'products'
+    });
+  };
+
   return ExcelFile;
 };

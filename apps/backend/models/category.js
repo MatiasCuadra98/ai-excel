@@ -18,5 +18,15 @@ module.exports = (sequelize) => {
     timestamps: true,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  Category.associate = function(models) {
+    // Category has many products
+    Category.hasMany(models.Product, {
+      foreignKey: 'categoryId',
+      as: 'products'
+    });
+  };
+
   return Category;
 };

@@ -41,7 +41,8 @@ const authenticateToken = async (req, res, next) => {
     // Add user info to request object for use in protected routes
     req.user = {
       id: user.id,
-      email: user.email
+      email: user.email,
+      username: user.username
     };
 
     next();
@@ -94,7 +95,7 @@ const optionalAuth = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || 'changeme');
     const user = await db.User.findByPk(decoded.id);
     
-    req.user = user ? { id: user.id, email: user.email } : null;
+    req.user = user ? { id: user.id, email: user.email, username: user.username } : null;
     next();
   } catch (error) {
     // If token validation fails, continue without user info

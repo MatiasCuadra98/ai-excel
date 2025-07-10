@@ -30,5 +30,21 @@ module.exports = (sequelize) => {
     updatedAt: false,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  PredictionLog.associate = function(models) {
+    // PredictionLog belongs to User
+    PredictionLog.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: 'user'
+    });
+
+    // PredictionLog belongs to Image
+    PredictionLog.belongsTo(models.Image, {
+      foreignKey: 'imageId',
+      as: 'image'
+    });
+  };
+
   return PredictionLog;
 };

@@ -29,5 +29,27 @@ module.exports = (sequelize) => {
     timestamps: true,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  Product.associate = function(models) {
+    // Product belongs to ExcelFile
+    Product.belongsTo(models.ExcelFile, {
+      foreignKey: 'excelFileId',
+      as: 'excelFile'
+    });
+
+    // Product belongs to Category
+    Product.belongsTo(models.Category, {
+      foreignKey: 'categoryId',
+      as: 'category'
+    });
+
+    // Product has one image (optional)
+    Product.belongsTo(models.Image, {
+      foreignKey: 'imageId',
+      as: 'image'
+    });
+  };
+
   return Product;
 };

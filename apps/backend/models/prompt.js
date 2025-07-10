@@ -25,5 +25,15 @@ module.exports = (sequelize) => {
     timestamps: true,
     paranoid: true, // Enable soft deletes
   });
+
+  // Define associations
+  Prompt.associate = function(models) {
+    // Prompt belongs to User
+    Prompt.belongsTo(models.User, {
+      foreignKey: 'userId',
+      as: 'user'
+    });
+  };
+
   return Prompt;
 };
