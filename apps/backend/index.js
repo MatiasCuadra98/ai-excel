@@ -34,9 +34,11 @@ app.get('/health', (req, res) => {
 // Import and use routes here
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api', chatRoutes);
 
 // 404 handler - must be after all routes
 app.use(notFoundHandler);
